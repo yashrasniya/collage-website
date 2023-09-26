@@ -1,7 +1,8 @@
 // import { useState } from 'react'
 import itg_img from '../../assets/institute-of-technology-gopeshwar-chamoli-logo.png'
-
+import { redirect ,useNavigate} from "react-router-dom";
 const NavBra = ()=> {
+    let navigate = useNavigate();
     return(<div className={'NavBra'}>
             <div className={'nav-logo'}>
                 <img className={'nav-logo-img'} src={itg_img}/>
@@ -31,7 +32,7 @@ const NavBra = ()=> {
                 <div className={'button'}>Administration</div>
                 <div className={'button'}>Departments</div>
                 <div className={'button'}>Academic</div>
-                <div className={'button login-button'}>Login</div>
+                <div  onClick={()=>{navigate('/login')}} className={'button login-button'}>Login</div>
 
             </div>
         </div>
