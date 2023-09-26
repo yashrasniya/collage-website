@@ -1,0 +1,498 @@
+:root{
+    margin: 0px;
+    padding: 0px;
+
+}
+html body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+.text-primary2{
+    color: #7E1717;
+}
+.topHeader{
+
+    background-color: #0D1282;
+    height:3vw;
+    display:flex;
+
+    justify-content: center;
+
+    gap:30px
+}
+
+.topHeader .link{
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /*border: red 2px solid;*/
+
+
+}
+
+.topHeader .link a{
+    /*border: red 2px solid;*/
+    color: #FFFFFF !important;
+    /*font-family: Hind;*/
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 600;
+    /*line-height: normal;*/
+    text-align: center;
+}
+.topHeader .link p{
+    /*border: #00ff94 2px solid;*/
+    display: inline;
+    vertical-align: middle;
+    margin-bottom: 0;
+
+}
+
+.NavBra{
+    height: 9.5vw;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+
+    padding-left: 40px;
+    padding-top: .3%;
+}
+
+.nav-logo{
+    padding: 5px;
+    display: flex;
+    width: 50%;
+    gap:10px;
+}
+.nav-logo-img{
+    /*width: 144px;*/
+    height: 8vw;
+    flex-shrink: 0;
+}
+.nav-logo-text{
+  display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+}
+.nav-logo-text p{
+    margin-bottom: 0px;
+}
+.hind{
+    color: #000;
+    font-family: Hind, serif;
+    font-size: 1.8vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.english{
+    color: #000;
+    font-family: Inter;
+    font-style: normal;
+
+    line-height: normal;
+}
+.lf{
+    font-size: 2vw;
+    font-weight: 700;
+}
+.sf{
+    font-size: .64vw;
+    font-weight: 600;
+}
+.mf{
+    font-size: 0.85vw;
+    font-weight: 600;
+}
+
+.nav-button{
+    display: flex;
+    gap: 1vw;
+    margin-top: 3.5%;
+    width: 50%;
+    justify-content: end;
+    margin-right: 2%;
+    text-align: right;
+
+
+}
+
+.nav-button .button{
+    height: 1.7vw;
+    font-family: Hind;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 7px;
+    border-radius: 5px;
+    box-sizing: content-box;
+}
+.nav-button .active{
+    background: #7E1717;
+    color: #FFFFFF;
+}
+.nav-button .button:hover{
+    background: #7E1717;
+    color: #FFFFFF;
+}
+.nav-button .login-button{
+    height: 1.6vw;
+    border: #7E1717 solid 2px;
+    margin-left: 5%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+.hamburger{
+    display: none;
+    width: 25%;
+    margin-top: 3%;
+    justify-content: right;
+    text-align: right;
+
+}
+.close{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .NavBra{
+        height: 14vw;
+        padding-left: 0;
+    }
+    .nav-logo{
+        width: 70%;
+    }
+    .nav-logo-img{
+        height: 12vw;
+    }
+    .nav-logo-text{
+        padding-top: 2px;
+    }
+    .hind{
+        font-size: 3.5vw;
+    }
+    .lf{
+        font-size: 3vw;
+    }
+    .sf {
+        font-size: 1vw;
+    }
+    .mf{
+        font-size: 1.5vw;
+    }
+    .hamburger{
+        display: block;
+    }
+    .nav-button{
+        flex-direction: column;
+        background-color: #FFFFFF;
+        display: none;
+        /*justify-content: right;*/
+        margin-top: 0%;
+        margin-right: 0%;
+        padding: 2.5%;
+        position: absolute;
+        z-index: 2;
+        justify-content: center;
+        width: 100vw;
+        gap: 1vw;
+        .button{
+            text-align: center;
+            font-size: 3vw;
+            margin-bottom: 8px;
+            width: 95%;
+            padding: 10px 0 15px 0;
+        }
+        .login-button{
+            margin-left: 0%;
+        }
+    }
+
+    .close{
+        display: flex;
+        justify-content: right;
+
+    }
+
+}
+
+.Carousel-img{
+    object-fit: cover;
+
+}
+
+.Announcement{
+    height: 2vw;
+    background-color: #FFFFFF;
+    display: flex;
+    gap:5px
+}
+.Announcements-text{
+    background-color: #0D1282;
+    color: #FFFFFF;
+    font-family: Inter;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 15%;
+    text-align: right;
+    padding-right: 5px;
+}
+.Announcements p{
+    margin-bottom: 0px;
+    display: flex;
+    white-space: nowrap;
+    animation: ani 30s linear infinite;
+}
+.Announcements p a{
+    margin-left: 20px;
+    font-size:1vw ;
+    animation: ani 60s linear infinite;
+}
+@keyframes ani {
+0%{transform: translateX(0);}
+100%{transform: translateX(-100%);}
+}
+
+
+.Announcements{
+    display: flex;
+    gap: 12px;
+    margin-left: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+.photo-text{
+    margin-bottom: 0;
+    color: #7E1717;
+}
+
+.news{
+
+    background-color: #F8F9FA;
+    height: 90%;
+}
+
+.event{
+    object-fit: cover;
+    background-image: url("public/event.jpeg");
+    height: 90%;
+}
+.event-back-color{
+    background-color: rgb(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+
+}
+
+.Activity{
+    background: #F8F9FA;
+    width: 100%;
+}
+
+/*
+    ================================
+        Best Viewed In Full Page
+    ================================
+*/
+
+/* Hover over a card to flip, can tab too. */
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* default */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+/*body {*/
+/*    min-height: 100vh;*/
+/*    padding: 40px;*/
+
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+
+/*    background: hsl(220, 10%, 12%);*/
+/*    font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;*/
+/*}*/
+
+/* .flip-card-container */
+.flip-card-container {
+    --hue: 150;
+    --primary: hsl(var(--hue), 50%, 50%);
+    --white-1: hsl(0, 0%, 90%);
+    --white-2: hsl(0, 0%, 80%);
+    --dark: hsl(var(--hue), 25%, 10%);
+    --grey: hsl(0, 0%, 50%);
+
+    width: 443px;
+    height: 287px;
+    /*margin: 40px;*/
+
+    perspective: 1000px;
+}
+
+/* .flip-card */
+.flip-card {
+    width: inherit;
+    height: inherit;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .6s .1s;
+}
+
+/* hover and focus-within states */
+.flip-card-container:hover .flip-card,
+.flip-card-container:focus-within .flip-card {
+    transform: rotateY(180deg);
+}
+
+/* .card-... */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    /*border-radius: 24px;*/
+
+    /*background: var(--dark);*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .card-front */
+.card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+/* .card-back */
+.card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+/* figure */
+figure {
+    z-index: -1;
+}
+
+/* figure, .img-bg */
+figure,
+.img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* img */
+/*img {*/
+/*    height: 100%;*/
+/*}*/
+
+/* figcaption */
+figcaption {
+    display: block;
+
+    width: 100%;
+    margin-top: 55%;
+    padding: 8px 22px;
+
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    /*text-align: right;*/
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+
+    color: var(--white-1);
+    background: hsla(var(--hue), 25%, 10%, .5);
+}
+.card-back-text{
+    margin-top: 0%;
+    padding-top: 10px;
+    height: 100%;
+
+}
+.card-back-text h4{
+    color: #FFF;
+    font-family: var(--bs-body-font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.card-back-text p{
+    color: #FFF;
+    font-family: var(--bs-body-font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: justify;
+}
+
+.card-front .img-bg::before {
+    content: "";
+
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(18deg);
+
+    width: 100%;
+    height: 6px;
+    /*border: 1px solid var(--primary);*/
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    transition: .1s;
+}
+
+
+
+/* hover state */
+/*.flip-card-container:hover .card-front .img-bg::before {*/
+/*    width: 6px;*/
+/*    border-left-color: var(--primary);*/
+/*    border-right-color: var(--primary);*/
+/*}*/
+
+
+
+
+.bg-blue{
+    background-color: #0D1282;
+    color: #FFFFFF;
+}
+
