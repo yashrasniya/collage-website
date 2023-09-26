@@ -6,7 +6,7 @@ import './auth.css';
 
 
 import Topheader from './topheader.jsx';
-import Navbar from './navbar.jsx';
+import Navbar from './Navbar.jsx';
 const Login_page = () => {
 
   return(<div className={'d-flex mt-5 justify-content-center'}>
