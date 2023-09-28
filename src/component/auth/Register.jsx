@@ -227,7 +227,7 @@ const Register_page = () => {
 const Register = ()=> {
     return(
         <>
-            <Topheader ></Topheader>
+            {/*<Topheader ></Topheader>*/}
             <Navbar obj={{auth: true}}></Navbar>
             <Register_page></Register_page>
 

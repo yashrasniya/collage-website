@@ -115,7 +115,7 @@ const Login_page = () => {
 const Login = ()=> {
     return(
         <>
-            <Topheader ></Topheader>
+            {/*<Topheader ></Topheader>*/}
             <Navbar obj={{auth: true}}></Navbar>
             <Login_page></Login_page>
 

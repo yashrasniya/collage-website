@@ -302,7 +302,7 @@ const Profile = () => {
 const Profile_page = ()=> {
     return(
         <>
-            <Topheader ></Topheader>
+            {/*<Topheader ></Topheader>*/}
             <Navbar obj={{auth: true}}></Navbar>
             <Profile></Profile>
 
