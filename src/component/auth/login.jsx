@@ -11,7 +11,7 @@ import Navbar from './Navbar.jsx';
 import { useNavigate} from "react-router-dom";
 
 
-const base_url='https://abhay.itgopeshwar.in'
+const base_url='https://abhay.itgopeshwar.in/'
 const Login_page = () => {
     let navigate = useNavigate();
     let [rollNumber,setRollNumber]=useState('')
