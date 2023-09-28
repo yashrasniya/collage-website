@@ -46,7 +46,8 @@ const Profile = () => {
 
         let obj= {...user_sender,
             ...localStorage.getItem("marksheet_10")?{'marksheet_10':localStorage.getItem("marksheet_10")}:{},
-            ...localStorage.getItem("marksheet_12")?{'marksheet_12':localStorage.getItem("marksheet_12")}:{}}
+            ...localStorage.getItem("marksheet_12")?{'marksheet_12':localStorage.getItem("marksheet_12")}:{},
+            ...localStorage.getItem("profile")?{'profile':localStorage.getItem("profile")}:{}}
         fetch(base_url+'profile/',{method:'POST', headers: {
                 "Content-Type": "application/json",
                 "Authorization":"Bearer "+localStorage.getItem("token"),
