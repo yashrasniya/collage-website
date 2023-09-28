@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 import itg_img from '../../assets/institute-of-technology-gopeshwar-chamoli-logo.png'
-import { redirect ,useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 const NavBra = ()=> {
     let navigate = useNavigate();
     return(<div className={'NavBra'}>
