@@ -15,7 +15,8 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
-    "react-owl-carousel": "^2.3.3"
+    "react-owl-carousel": "^2.3.3",
+    "state-pool": "^0.10.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

@@ -2,8 +2,9 @@ import Topheader from "./topheader.jsx";
 import Navbar from "./Navbar.jsx";
 import {useEffect, useState} from "react";
 import {json, useNavigate} from "react-router-dom";
+import {store} from 'state-pool';
 
-const base_url='http://127.0.0.1:8000/api/'
+const base_url='https://abhay.itgopeshwar.in'
 
 const Profile = () => {
     const [user,setUser]=useState({'roll_number':'wait'})
@@ -28,6 +29,9 @@ const Profile = () => {
             if(response.status===200){
                 setUser(result)
                 setisData(true)
+                store.setState("profile",result.profile)
+
+
 
             }else {
                 navigate('/login')

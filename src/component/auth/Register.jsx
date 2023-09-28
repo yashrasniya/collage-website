@@ -1,7 +1,6 @@
 // import { useState } from 'react'
 // import '../home/home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './auth.css';
 
 
@@ -9,7 +8,7 @@ import Topheader from './topheader.jsx';
 import Navbar from './Navbar.jsx';
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-const base_url='http://127.0.0.1:8000/api/'
+const base_url='https://abhay.itgopeshwar.in'
 
 
 const Register_page = () => {
@@ -228,7 +227,7 @@ const Register = ()=> {
     return(
         <>
             {/*<Topheader ></Topheader>*/}
-            <Navbar obj={{auth: true}}></Navbar>
+            <Navbar obj={{auth: false}}></Navbar>
             <Register_page></Register_page>
 
         </>
