@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {json, useNavigate} from "react-router-dom";
 import {store} from 'state-pool';
 
-const base_url='https://abhay.itgopeshwar.in/'
+const base_url='https://abhay.itgopeshwar.in/api/'
 
 const Profile = () => {
     const [user,setUser]=useState({'roll_number':'wait'})
