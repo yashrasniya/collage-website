@@ -55,15 +55,23 @@ const Profile = () => {
 
             },body: JSON.stringify(obj)}).then(reponse=>reponse.json()).
         then(result=> {
-            setUser(result)
-            if (localStorage.getItem("marksheet_10")){
-                localStorage.removeItem("marksheet_10")
+            if(result.status===200){
+                setUser(result)
+                if (localStorage.getItem("marksheet_10")){
+                    localStorage.removeItem("marksheet_10")
 
-            }
-            if (localStorage.getItem("marksheet_12")){
-                localStorage.removeItem("marksheet_12")
+                }
+                if (localStorage.getItem("marksheet_12")){
+                    localStorage.removeItem("marksheet_12")
 
+                }
+                if (localStorage.getItem("profile")){
+                    localStorage.removeItem("profile")
+
+                }
+                alert('data saved!')
             }
+
         })
             .catch(error=>alert('some thing went wrong'))
 
@@ -218,10 +226,11 @@ const Profile = () => {
             <div className={'row px-3'}>
         <div className="form-check col">
             <input className="form-check-input" type="radio" name="flexRadioDefault" id="gender" value={"Male"}
-                   onClick={ (event)=> {
-                       setUserSender({...user, [event.target.id]: event.target.value})
-                       console.log(event.target.value)
-                   }}
+                   // onClick={ (event)=> {
+                   //     setUserSender({...user, [event.target.id]: event.target.value})
+                   //     console.log(event.target.value)
+                   // }}
+                   onChange={heandelOnChange}
                    checked={user.gender=='Male'}
             />
                 <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -229,9 +238,11 @@ const Profile = () => {
                 </label>
         </div>
             <div className="form-check col">
-                <input className="form-check-input" type="radio" name="flexRadioDefault" id="gender"     value={"Female"}                        onChange={()=>setUser({...user,[event.target.id]:event.target.value})}
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="gender"     value={"Female"}
+                       onChange={heandelOnChange}
                        checked={user.gender=='Female'}
-                       onClick={heandelOnChange}/>
+                       // onClick={heandelOnChange}
+                />
                 <label className="form-check-label" htmlFor="flexRadioDefault2">
                     Female
                 </label>
@@ -250,7 +261,7 @@ const Profile = () => {
                                value={user.state} placeholder='State'/>
                     </div>
                     <div className={'col-6 mb-3'}>
-                        <input type="text" className="form-control" id="ity"
+                        <input type="text" className="form-control" id="city"
                                onChange={heandelOnChange}
                                value={user.city}  placeholder='City'/>
                     </div>
