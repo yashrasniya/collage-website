@@ -8,7 +8,7 @@ import Topheader from './topheader.jsx';
 import Navbar from './Navbar.jsx';
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
-const base_url='https://abhay.itgopeshwar.in/api/'
+const base_url='https://api.itgopeshwar.in/api/'
 
 
 const Register_page = () => {
