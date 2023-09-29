@@ -69,6 +69,7 @@ const Login_page = () => {
                 if(result.status===200){
                     set_obj_data(result);
                     localStorage.setItem("token", result.token);
+                    localStorage.setItem("login", true);
                     navigate('/profile')
                 }
                 else if(result.status===400){

@@ -6,7 +6,10 @@ import {useNavigate} from "react-router-dom";
 const url='https://itgopeshwar.ac.in/wp-content/uploads/2022/11/13.jpeg'
 const Navbar = ({obj}) => {
     let navigate = useNavigate();
-
+    obj=false
+    if (localStorage.getItem('login')){
+        obj=true
+    }
     console.log(obj.auth)
     return(<div className={'NavBra'}>
         <div className={'nav-logo '}>
@@ -40,7 +43,10 @@ const Navbar = ({obj}) => {
                 }}><svg width="20" height="20" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M70.7 64.3C72.5 66.1 72.5 68.8999 70.7 70.6999C69.8 71.5999 68.7 72 67.5 72C66.3 72 65.2 71.5999 64.3 70.6999L46 52.4L27.7 70.6999C26.8 71.5999 25.7 72 24.5 72C23.3 72 22.2 71.5999 21.3 70.6999C19.5 68.8999 19.5 66.1 21.3 64.3L39.6 46L21.3 27.7C19.5 25.9 19.5 23.1 21.3 21.3C23.1 19.5 25.9 19.5 27.7 21.3L46 39.6L64.3 21.3C66.1 19.5 68.9 19.5 70.7 21.3C72.5 23.1 72.5 25.9 70.7 27.7L52.4 46L70.7 64.3Z" fill="black"/>
                 </svg></div>
-                <div  onClick={()=>{localStorage.removeItem('token');navigate('/login')}} className={'button login-button'}>Logout</div>
+                <div  onClick={()=>{localStorage.removeItem('token');
+                    localStorage.removeItem("login");
+
+                    navigate('/login')}} className={'button login-button'}>Logout</div>
             </div></>):(<div></div>)}
 
     </div>)
