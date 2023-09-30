@@ -102,8 +102,8 @@ const Login_page = () => {
         <input type="password" className="form-control" onChange={(e)=>{setpassword(e.target.value)}} id="password" placeholder='*********'/>
     </div>
           <input type='button' value={'Login '}  onClick={handelLogin} className={'btn w-100 text-light'} style={{backgroundColor:'#7E1717'}}/>
-      <div className={'w-100  text-end'} onClick={()=>{navigate('/register')}}>
-          <a>Register</a>
+      <div className={'w-100  d-flex justify-content-end text-end'} >
+          <a onClick={()=>{navigate('/register')}} role="button">Register</a>
       </div>
           </div>
       </div></div>

@@ -109,7 +109,7 @@ const Register_page = () => {
             setError('Password one and two are not Same')
             return;
         }
-        if (!(data.mobile_number.length <=10 )) {
+        if (!(data.mobile_number.length ===10 )) {
             setError('Mobile Number Must be 10 Characters long')
             return;
         }
@@ -215,8 +215,9 @@ const Register_page = () => {
                             <label className="form-label ms-2" htmlFor="customCheck1">All information are correct and related to me.</label>
                     </div>
                     <input type='button' value={'Register '} onClick={handelSubmit} className={'btn w-100 text-light'} style={{backgroundColor:'#7E1717'}}/>
-                    <div className={'w-100  text-end'} onClick={()=>{navigate('/login')}}>
-                        <a>Login</a>
+
+                    <div className={'w-100  d-flex justify-content-end text-end'} >
+                        <a onClick={()=>{navigate('/login')}} role="button">Login</a>
                     </div>
                 </div>
             </div></div>

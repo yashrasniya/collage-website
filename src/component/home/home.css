@@ -141,8 +141,14 @@ input::-webkit-inner-spin-button {
     line-height: normal;
     padding: 7px;
     border-radius: 5px;
+    /*display: flex;*/
+    /*justify-content: center;*/
     box-sizing: content-box;
 }
+/*.nav-button .button svg {*/
+/*    height: 2vw;*/
+
+/*}*/
 .nav-button .active{
     background: #7E1717;
     color: #FFFFFF;
@@ -150,6 +156,7 @@ input::-webkit-inner-spin-button {
 .nav-button .button:hover{
     background: #7E1717;
     color: #FFFFFF;
+    fill:#FFFFFF;
 }
 .nav-button .login-button{
     height: 1.6vw;

@@ -48,6 +48,15 @@ const Profile = () => {
             ...data.marksheet_10?{'marksheet_10':data.marksheet_10}:{},
             ...data.marksheet_12?{'marksheet_12':data.marksheet_10}:{},
             ...data.profile?{'profile':data.marksheet_10}:{}}
+
+        if ((isNaN(obj.adhar_number))) {
+            alert('Adhar Number Number must be INT')
+            return;
+        }
+        if (!(obj.adhar_number.length ===12 )) {
+            alert('Adhar Number Must be 12 Characters long')
+            return;
+        }
         fetch(base_url+'profile/',{method:'POST', headers: {
                 "Content-Type": "application/json",
                 "Authorization":"Bearer "+localStorage.getItem("token"),
@@ -57,26 +66,15 @@ const Profile = () => {
         then(result=> {
             if(result.status===200){
                 setUser(result)
-                if (localStorage.getItem("marksheet_10")){
-                    localStorage.removeItem("marksheet_10")
 
-                }
-                if (localStorage.getItem("marksheet_12")){
-                    localStorage.removeItem("marksheet_12")
-
-                }
-                if (localStorage.getItem("profile")){
-                    localStorage.removeItem("profile")
-
-                }
-                alert('data saved!')
+                alert('Data saved!')
             }
             else{
                 alert(result)
             }
 
         })
-            .catch(error=>alert('some thing went wrong'+error))
+            .catch(error=>alert('some thing went wrong plz  '+error))
 
     };
     function getBase64(e) {
