@@ -41,13 +41,13 @@ const Profile = () => {
     }
 
 })
-    const handelSave = () => {
+    const handelSave = (data) => {
 
 
         let obj= {...user_sender,
-            ...localStorage.getItem("marksheet_10")?{'marksheet_10':localStorage.getItem("marksheet_10")}:{},
-            ...localStorage.getItem("marksheet_12")?{'marksheet_12':localStorage.getItem("marksheet_12")}:{},
-            ...localStorage.getItem("profile")?{'profile':localStorage.getItem("profile")}:{}}
+            ...data.marksheet_10?{'marksheet_10':data.marksheet_10}:{},
+            ...data.marksheet_12?{'marksheet_12':data.marksheet_10}:{},
+            ...data.profile?{'profile':data.marksheet_10}:{}}
         fetch(base_url+'profile/',{method:'POST', headers: {
                 "Content-Type": "application/json",
                 "Authorization":"Bearer "+localStorage.getItem("token"),
@@ -71,9 +71,12 @@ const Profile = () => {
                 }
                 alert('data saved!')
             }
+            else{
+                alert(result)
+            }
 
         })
-            .catch(error=>alert('some thing went wrong'))
+            .catch(error=>alert('some thing went wrong'+error))
 
     };
     function getBase64(e) {
@@ -86,8 +89,8 @@ const Profile = () => {
         reader.readAsDataURL(file);
         reader.onload = function () {
             console.log(reader.result);
-            localStorage.setItem([e.target.id], reader.result);
-            handelSave()
+            // localStorage.setItem([e.target.id], reader.result);
+            handelSave({[e.target.id]: reader.result})
 
             // return reader.result
         };
@@ -162,8 +165,8 @@ const Profile = () => {
             </div>
         </div>
         <div className="mb-3">
-            <label  className="form-label">DOB</label>
-            <input type="date" className="form-control" id="dob" value={user.dob}
+            <label  className="form-label">DOB<span className={'text-danger'}>*</span></label>
+            <input type="date" className="form-control" id="dob"  required value={user.dob}
                    onChange={heandelOnChange}
                    placeholder=''/>
         </div>
@@ -187,13 +190,13 @@ const Profile = () => {
             </div>
         </div>
         <div className="mb-3">
-            <label  className="form-label">Mother Name</label>
+            <label  className="form-label">Mother Name<span className={'text-danger'}>*</span></label>
             <input type="text" className="form-control" id="Mother_name" value={user.Mother_name}
                    onChange={heandelOnChange}
                    placeholder=''/>
         </div>
         <div className="mb-3">
-            <label  className="form-label">Father Name</label>
+            <label  className="form-label">Father Name<span className={'text-danger'}>*</span></label>
             <input type="text" className="form-control" id="Father_name"
                    onChange={heandelOnChange}
                    value={user.Father_name}placeholder=''/>
@@ -206,7 +209,7 @@ const Profile = () => {
                    value={user.email} placeholder='abc@gmail.com'/>
         </div>
         <div className="mb-3">
-            <label  className="form-label">Mobile number</label>
+            <label  className="form-label">Mobile number<span className={'text-danger'}>*</span></label>
             <div className="input-group mb-3">
                 <span className="input-group-text" id="basic-addon1">+91</span>
                 <input type="text" className="form-control" id="mobile_number"
@@ -214,7 +217,7 @@ const Profile = () => {
                        value={user.mobile_number} placeholder='9844444333'/></div>
         </div>
         <div className="mb-3">
-            <label  className="form-label">Parent Mobile number</label>
+            <label  className="form-label">Parent Mobile number<span className={'text-danger'}>*</span></label>
             <div className="input-group mb-3">
                 <span className="input-group-text" >+91</span>
                 <input type="text" className="form-control" id="parent_mobile_number"
@@ -222,7 +225,7 @@ const Profile = () => {
                        value={user.parent_mobile_number} placeholder='9844444333'/></div>
         </div>
         <div className={'mb-3'}>
-            <div className={'form-label'}>Gender</div>
+            <div className={'form-label'}>Gender<span className={'text-danger'}>*</span></div>
             <div className={'row px-3'}>
         <div className="form-check col">
             <input className="form-check-input" type="radio" name="flexRadioDefault" id="gender" value={"Male"}
@@ -248,7 +251,7 @@ const Profile = () => {
                 </label>
             </div></div>
             <div className="mb-3 ">
-                <label  className="form-label">Address</label>
+                <label  className="form-label">Address <span className={'text-danger'}>*</span></label>
                 <div className={'row'}>
                     <div className={'col-6 mb-3'}>
                         <input type="text" className="form-control" id="country"
@@ -284,7 +287,7 @@ const Profile = () => {
                 </div>
             </div>
         <div className={'mb-3'}>
-            <label  className="form-label">Adhar Number</label>
+            <label  className="form-label">Adhar Number <span className={'text-danger'}>*</span></label>
             <input type="text" className="form-control" id="adhar_number"  value={user.adhar_number}
                    onChange={heandelOnChange}
                    placeholder='1112223334445555'/>
