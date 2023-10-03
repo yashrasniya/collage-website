@@ -177,6 +177,9 @@ input::-webkit-inner-spin-button {
     display: none;
 }
 @media screen and (max-width: 600px) {
+    body{
+        overflow-x:hidden;
+    }
     .NavBra{
         height: 14vw;
         padding-left: 0;
@@ -235,6 +238,7 @@ input::-webkit-inner-spin-button {
         justify-content: right;
 
     }
+
 
 }
 
@@ -361,6 +365,10 @@ input::-webkit-inner-spin-button {
 
     perspective: 1000px;
 }
+.Courses_container{
+    width: 100vw;
+}
+
 
 /* .flip-card */
 .flip-card {
@@ -511,3 +519,25 @@ figcaption {
     color: #FFFFFF;
 }
 
+.futtor{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px)  {
+    figcaption{
+        margin-top: 53%;
+    }
+    .flip-card-container{
+        width: 400px;
+        height: 250px;
+    }
+    .Courses_container{
+        width: 100%;
+        /*border: black 1px solid;*/
+    }
+    html, body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+}

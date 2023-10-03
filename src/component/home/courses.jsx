@@ -16,7 +16,7 @@ const Courses_array=[
 
 const Course = (obj) => {
     return(
-        <div className={'col-11 col-md-3  col-sm-11 mx-5 my-3 d-flex justify-content-center'}>
+        <div className={'col-11 col-md-3  col-sm-11 mx-0 mx-md-5 my-3 d-flex justify-content-center'}>
         <div className={'flip-card-container '}>
 
     <div className={' flip-card'}>
@@ -44,7 +44,7 @@ const Course = (obj) => {
 
 }
 const Courses=()=>{
-    return(<div className={'mt-5 row d-flex justify-content-evenly text-center '}>
+    return(<div className={'mt-5 row d-flex justify-content-evenly text-center Courses_container'} >
             <h4 className={'text-primary2'}> Courses OFFERED</h4>
             {Courses_array.map(Course)}
         </div>

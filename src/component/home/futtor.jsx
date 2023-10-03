@@ -37,7 +37,7 @@ const block = (obj) => {
   )
 }
 const Futtor=()=>{
-    return(<div className={'mt-5 p-5 d-flex justify-content-center bg-blue'}>
+    return(<div className={'mt-5 p-5 d-flex justify-content-center bg-blue futtor'}>
 <div className={'row'}>
     {block_array.map(block)}
 </div>
