@@ -47,7 +47,7 @@ const Profile = () => {
         let obj= {...user_sender,
             ...data.marksheet_10?{'marksheet_10':data.marksheet_10}:{},
             ...data.marksheet_12?{'marksheet_12':data.marksheet_10}:{},
-            ...data.profile?{'profile':data.marksheet_10}:{}}
+            ...data.profile?{'profile':data.profile}:{}}
         if (obj.adhar_number){
             if ((isNaN(obj.adhar_number))) {
                 alert('Adhar Number Number must be INT')
