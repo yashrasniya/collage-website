@@ -48,15 +48,17 @@ const Profile = () => {
             ...data.marksheet_10?{'marksheet_10':data.marksheet_10}:{},
             ...data.marksheet_12?{'marksheet_12':data.marksheet_10}:{},
             ...data.profile?{'profile':data.marksheet_10}:{}}
+        if (obj.adhar_number){
+            if ((isNaN(obj.adhar_number))) {
+                alert('Adhar Number Number must be INT')
+                return;
+            }
+            if (!(obj.adhar_number.length ===12 )) {
+                alert('Adhar Number Must be 12 Characters long')
+                return;
+            }
+        }
 
-        if ((isNaN(obj.adhar_number))) {
-            alert('Adhar Number Number must be INT')
-            return;
-        }
-        if (!(obj.adhar_number.length ===12 )) {
-            alert('Adhar Number Must be 12 Characters long')
-            return;
-        }
         fetch(base_url+'profile/',{method:'POST', headers: {
                 "Content-Type": "application/json",
                 "Authorization":"Bearer "+localStorage.getItem("token"),
