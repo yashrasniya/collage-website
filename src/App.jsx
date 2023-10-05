@@ -5,6 +5,7 @@ import Home from './component/home/home.jsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 import Profile_page from "./component/auth/profile.jsx";
+import Classmates from "./component/Classmates.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/login" element={<Login />}/>
             <Route path="/register" element={<Register />}/>
             <Route path="/profile" element={<Profile_page />}/>
+            <Route path="/Classmates" element={<Classmates/>}/>
         </Routes>
       </BrowserRouter>
   )

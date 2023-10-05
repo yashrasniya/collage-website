@@ -70,6 +70,7 @@ const Login_page = () => {
                     set_obj_data(result);
                     localStorage.setItem("token", result.token);
                     localStorage.setItem("login", true);
+                    localStorage.setItem("is_cr", result.is_cr);
                     navigate('/profile')
                 }
                 else if(result.status===400){
