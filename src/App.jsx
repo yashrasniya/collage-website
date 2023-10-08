@@ -5,7 +5,9 @@ import Home from './component/home/home.jsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 import Profile_page from "./component/auth/profile.jsx";
-import Classmates from "./component/Classmates.jsx";
+import Classmates from "./component/nav_pages/Classmates.jsx";
+import Feedback from "./component/nav_pages/feedback.jsx";
+import Old_paper from "./component/nav_pages/old_paper.jsx";
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
             <Route path="/register" element={<Register />}/>
             <Route path="/profile" element={<Profile_page />}/>
             <Route path="/Classmates" element={<Classmates/>}/>
+            <Route path="/feedback" element={<Feedback/>}/>
+            <Route path="/oldpaper" element={<Old_paper/>}/>
         </Routes>
       </BrowserRouter>
   )

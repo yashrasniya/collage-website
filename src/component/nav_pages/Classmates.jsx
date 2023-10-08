@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './auth/Navbar.jsx';
+import Navbar from '../auth/Navbar.jsx';
 import { useNavigate} from "react-router-dom";
-
 
 const base_url='https://api.itgopeshwar.in/api/'
 const Students = () => {
