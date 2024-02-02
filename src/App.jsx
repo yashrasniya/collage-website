@@ -8,6 +8,7 @@ import Profile_page from "./component/auth/profile.jsx";
 import Classmates from "./component/nav_pages/Classmates.jsx";
 import Feedback from "./component/nav_pages/feedback.jsx";
 import Old_paper from "./component/nav_pages/old_paper.jsx";
+import DirectorMessage from './pages/directorMessage/DirectorMessage.jsx';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/Classmates" element={<Classmates/>}/>
             <Route path="/feedback" element={<Feedback/>}/>
             <Route path="/oldpaper" element={<Old_paper/>}/>
+            <Route path='/director-message' element={<DirectorMessage />} />
         </Routes>
       </BrowserRouter>
   )
