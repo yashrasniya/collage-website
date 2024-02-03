@@ -33,7 +33,11 @@ const Departmen = () => {
             <div className='container-main'>
                 <h1 style={{ color: "#7E1717", textAlign: "center" }}>Computer Science And Engineering</h1>
                 <div className="container-top">
-                    <div className="top-img-cont"></div>
+                    <div className="top-img-cont">
+                        <img src="/dep-tt.svg" className='first' alt="" />
+                        <img src="/dep-tl.svg" className='second' alt="" />
+                        <img src="/dep-tb.svg" className='third' alt="" />
+                    </div>
                     <div className="top-desc-cont">
                         <p>
                         The core courses offered by the Department of Computer Engineering are B.Tech Degree in Computer Science and Engineering . These courses are aimed at providing theoretical and practical knowledge of Computer Science. The subjects in Bachelor’s level programme include Computer Architecture and Organisation,Automata Languages and Computation,Data Stuctures and Algorithms, Database Management Systems,Language Processor,Computer Networks,Advanced Architecture and Parallel Processing ,Software Engineering, Digital Signal Processing ,Analysis and Design of Algorithms etc.
@@ -63,6 +67,7 @@ const Departmen = () => {
 
                 <div className="container-mid">
                     <div className="mid-left">
+                        <h2 style={{color:"#7E1717",marginBottom:"10px"}}>Program Educational Objective</h2>
                         <p>
                             To develop technically competent and well trained software engineers to attain National and International recognition.
                             To frame and disseminate high quality program with the continuous and co-ordinate efforts of faculty and student body at all academic levels and various sectors.
@@ -71,7 +76,9 @@ const Departmen = () => {
                             To produce ethically and socially responsible engineers who can involve themselves for community development to increase the productivity by providing suitable engineering solutions. To provide an academically conducive environment for individuals to develop as technologically superior, socially conscious and nationally responsible citizens
                         </p>
                     </div>
-                    <div className="mid-right"></div>
+                    <div className="mid-right">
+                        <img src='/dep-b.svg' />
+                    </div>
                 </div>
                 <div className="container-bottom">
                     {
