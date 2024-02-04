@@ -27,11 +27,11 @@ const block_array= [
 ]
 const block = (obj) => {
   return(
-      <div className={'col'}>
+      <div className={'col text-white'}>
           <h4>{obj.title}</h4>
           {obj.items.map((obj_1)=>
           {return(
-              <p className={'my-0'}>{obj_1}</p>)
+              <p className={'my-0 text-white'}>{obj_1}</p>)
           })}
       </div>
   )

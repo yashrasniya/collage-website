@@ -8,13 +8,13 @@ import photo_1 from '../../assets/1.jpeg'
 import photo_2 from '../../assets/2.jpeg'
 import photo_3 from '../../assets/3.png'
 import photo_4 from '../../assets/4.jpeg'
-import photo_5 from '../../assets/5.jpeg'
+import photo_5 from '/director.svg'
 const photos_array=[
     {src:photo_1,text_1:"Lt. Gen. Gurmit Singh",text_2:"Governor,Uttarakhand"},
     {src:photo_2,text_1:"Shri Pushkar Singh Dhami",text_2:"Chief Minister Uttarakhand"},
     {src:photo_3,text_1:"Shri Subodh Uniyal",text_2:"Minister Technical Education, ,Uttarakhand"},
     {src:photo_4,text_1:"Dr. Onkar Singh",text_2:"Vice Chancellor,UTU"},
-    {src:photo_5,text_1:"Dr. Sanjeev Naithani",text_2:"Director IT Gopeshwar"}
+    {src:photo_5,text_1:"Dr. Amit Agarwal",text_2:"Director IT Gopeshwar"}
 ]
 const Photo = (obj) => {
     return (

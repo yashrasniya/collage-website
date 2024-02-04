@@ -1,14 +1,8 @@
 // import { useState } from 'react'
 const Announcements_array=[
-    '71th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '72th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '73th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '74th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '75th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '76th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '77th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '78th Independence Day Celebrations at IIT Madras - Live Webcast ',
-    '79th Independence Day Celebrations at IIT Madras - Live Webcast ',
+    '|| 23/09/2023 – Walk in Interview Guest Faculty Positions ',
+    '||   20/02/2023 - Walk-in-Interview for Various Faculty Positions',
+    '20/02/2022 10 Days Short Term Course on Coding & Artificial Intelligence  ',
 
 ]
 const Announcements=(text)=>
