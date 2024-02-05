@@ -22,19 +22,19 @@ const img_srcs=[
 ]
 const Img = (obj) => {
 
-    return(<div className={'d-flex justify-content-center mx-4 py-4 '}>
+    return(
+    <div className={'d-flex justify-content-center mx-4 py-4 py-4 '}>
 
 
-    <div  className={'item'}>
+    {/* <div  className={'item'}> */}
         <Image
             src={obj}
             // width={'600px'}
             height={'300px'}
-            className={'rounded object-fit-cover  '}
+            className={'rounded object-fit-cover  '} />
 
-        />
-    </div>
-    </div>
+        {/* </div> */}
+        </div>
 
     )
 
