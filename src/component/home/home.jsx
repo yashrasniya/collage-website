@@ -25,7 +25,7 @@ const Home = ()=> {
             <Photos></Photos>
             <News_event></News_event>
             <Activity></Activity>
-            {/* <About></About> */}
+             <About></About>
             <Courses></Courses>
             <Futtor></Futtor>
         </>
