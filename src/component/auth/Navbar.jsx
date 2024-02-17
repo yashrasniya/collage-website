@@ -37,7 +37,7 @@ const Navbar = ({obj}) => {
     }
     console.log(is_cr)
     return(<div className={'NavBra'}>
-        <div className={'nav-logo '}>
+        <div className={'nav-logo '} onClick={()=>navigate('/home')}>
             <img className={'nav-logo-img'} src={itg_img}/>
             <div className={'nav-logo-text'}>
                 <p className={'hind'}>प्रौद्योगिकी संस्थान, गोपेश्वर</p>

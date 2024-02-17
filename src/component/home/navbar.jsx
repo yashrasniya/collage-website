@@ -3,6 +3,7 @@ import itg_img from '../../assets/institute-of-technology-gopeshwar-chamoli-logo
 import { useNavigate} from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import dropdown from "bootstrap/js/src/dropdown.js";
+import {useState} from "react";
 
 let l=[
     {name:"Home",child:[
@@ -140,11 +141,23 @@ let l=[
 
 const NavBra = ()=> {
     let navigate = useNavigate();
+    const [show, setShow] = useState(false);
+    const showDropdown = (e)=>{
+        setShow(!show);
+    }
+    const hideDropdown = (e) => {
+        setShow(false);
+    }
     const child_loop = (obj) => {
         return obj.child.map((obj_2)=>{
             if(obj_2?.child){
                 return (<Dropdown drop= 'end'  >
-                    <Dropdown.Toggle  variant="none"  show={false}  id="dropdown-basic"  >
+                    <Dropdown.Toggle
+                        variant="none"
+                                      show={false}
+                                      id="dropdown-basic"
+                                      onMouseEnter={showDropdown}
+                                      onMouseLeave={hideDropdown} >
                         {obj_2.name}
                     </Dropdown.Toggle  >
                 <Dropdown.Menu  >
@@ -153,7 +166,7 @@ const NavBra = ()=> {
                 </Dropdown>)
             }
             else {
-                return ( <Dropdown.Item href="#/action-1">{obj_2.name}</Dropdown.Item>)
+                return ( <Dropdown.Item >{obj_2.name}</Dropdown.Item>)
             }
 
         })
@@ -185,7 +198,7 @@ const NavBra = ()=> {
                 {l.map((obj)=> {
                     return (<>
                     <Dropdown >
-                        <Dropdown.Toggle className={'button'} variant="none" show={false} id="dropdown-basic">
+                        <Dropdown.Toggle className={'button'} variant="none" show={false}  id="dropdown-basic">
                             {obj.name}
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
